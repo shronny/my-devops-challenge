@@ -12,3 +12,6 @@ before_script:
 
 after_script:
   - curl localhost:3000/secret
+
+os:
+  - linux

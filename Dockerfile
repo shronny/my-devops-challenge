@@ -1,3 +1,5 @@
-FROM python:3-onbuild
-COPY src/ /usr/src/app
-CMD ["python", "app.py"]
+  FROM readytalk/nodejs
+  WORKDIR /app
+  ADD package.json /app/
+  RUN npm install
+  ADD . /app
