@@ -1,0 +1,17 @@
+language: 
+  node_js
+node_js:
+  - 6.3.1
+  - 5.1
+branches:
+  only:
+    - master
+before_script:
+  # install dependencies
+  - npm install
+
+after_script:
+  - curl localhost:3000/secret
+
+os:
+  - linux
